@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2973D49022C127F00045D847 /* SRDraggableVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = 2973D48E22C127F00045D847 /* SRDraggableVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2973D49722C128320045D847 /* SRDraggableVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2973D49622C128320045D847 /* SRDraggableVideoView.swift */; };
+		2973D49B22C1299B0045D847 /* SRDraggableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2973D49A22C1299B0045D847 /* SRDraggableView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2973D48B22C127F00045D847 /* SRDraggableVideo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SRDraggableVideo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2973D48E22C127F00045D847 /* SRDraggableVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRDraggableVideo.h; sourceTree = "<group>"; };
 		2973D48F22C127F00045D847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2973D49622C128320045D847 /* SRDraggableVideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRDraggableVideoView.swift; sourceTree = "<group>"; };
+		2973D49A22C1299B0045D847 /* SRDraggableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SRDraggableView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 			children = (
 				2973D48E22C127F00045D847 /* SRDraggableVideo.h */,
 				2973D48F22C127F00045D847 /* Info.plist */,
+				2973D49622C128320045D847 /* SRDraggableVideoView.swift */,
+				2973D49A22C1299B0045D847 /* SRDraggableView.xib */,
 			);
 			path = SRDraggableVideo;
 			sourceTree = "<group>";
@@ -95,6 +101,7 @@
 				TargetAttributes = {
 					2973D48A22C127F00045D847 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -120,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2973D49B22C1299B0045D847 /* SRDraggableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2973D49722C128320045D847 /* SRDraggableVideoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +270,7 @@
 		2973D49422C127F00045D847 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -278,6 +288,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.SRDraggableVideo";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,6 +297,7 @@
 		2973D49522C127F00045D847 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
