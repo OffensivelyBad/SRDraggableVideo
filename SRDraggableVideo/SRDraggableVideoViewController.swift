@@ -44,7 +44,11 @@ extension SRDraggableVideoViewController {
         // Setup video playback
         self.audioSession = AVAudioSession()
         do {
-            try self.audioSession?.setCategory(.playback, mode: .moviePlayback)
+            if #available(iOS 10.0, *) {
+                try self.audioSession?.setCategory(.playback, mode: .moviePlayback)
+            } else {
+                // Fallback on earlier versions
+            }
         } catch {
             fatalError("Failed to initialize AV Session")
         }
