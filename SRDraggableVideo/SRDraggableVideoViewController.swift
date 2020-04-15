@@ -12,6 +12,7 @@ import AVKit
 
 public protocol DraggableVideoDelegate {
     func stopTapped()
+    func didStartFullScreenVideo()
 }
 
 public class SRDraggableVideoViewController: UIViewController {
@@ -23,6 +24,15 @@ public class SRDraggableVideoViewController: UIViewController {
     
     // delegation
     public var delegate: DraggableVideoDelegate?
+    
+}
+
+// MARK: - AVPlayerViewControllerDelegate
+extension SRDraggableVideoViewController: AVPlayerViewControllerDelegate {
+    
+    public func playerViewController(_ playerViewController: AVPlayerViewController, willBeginFullScreenPresentationWithAnimationCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        self.delegate?.didStartFullScreenVideo()
+    }
     
 }
     
@@ -68,6 +78,7 @@ extension SRDraggableVideoViewController {
         self.playerController = AVPlayerViewController()
         self.playerController?.player = self.player
         self.playerController?.view.frame = self.view.bounds
+        self.playerController?.delegate = self
         
         guard let controller = self.playerController else { return }
         self.addChild(controller)
